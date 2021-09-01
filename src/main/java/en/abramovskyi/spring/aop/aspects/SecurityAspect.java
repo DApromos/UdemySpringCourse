@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(5)
+@Order(30)
 public class SecurityAspect {
     @Before("en.abramovskyi.spring.aop.aspects.MyPointcuts.allAddMethods()")
     public void beforeAddSecurityAdvice(){

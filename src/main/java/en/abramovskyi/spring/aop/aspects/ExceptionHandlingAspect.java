@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(-3)
+@Order(20)
 public class ExceptionHandlingAspect {
     @Before("en.abramovskyi.spring.aop.aspects.MyPointcuts.allAddMethods()")
     public void beforeAddExceptionHandlingAdvice(){
