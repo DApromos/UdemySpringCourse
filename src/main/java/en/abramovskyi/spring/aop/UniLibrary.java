@@ -15,8 +15,10 @@ public class UniLibrary extends AbstractLibrary {
 //        System.out.println("We take a book from UniLibrary: " + book.getName());
 //    }
 
-    public void returnBook(){
-        System.out.println("We return book");
+    public String returnBook(){
+        int i=10/0;
+        System.out.println("We return book in UniLibrary");
+        return  "War and peace";
     }
 
     public void getMagazine(){
