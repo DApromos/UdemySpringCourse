@@ -1,10 +1,11 @@
-package en.abramovskyi.spring.hibernate_test.entity;
+package en.abramovskyi.spring.hibernate_test2.entity;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "my_db.employees")
 public class Employee {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -21,6 +22,10 @@ public class Employee {
 
     @Column(name="salary")
     private int salary;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "details_id")
+    private Detail empDetail;
 
     public Employee() {
     }
