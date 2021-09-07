@@ -1,8 +1,8 @@
-package en.abramovskyi.spring.hibernate_test2;
+package en.abramovskyi.spring.hibernate_one_to_one;
 
 
-import en.abramovskyi.spring.hibernate_test2.entity.Detail;
-import en.abramovskyi.spring.hibernate_test2.entity.Employee;
+import en.abramovskyi.spring.hibernate_one_to_one.entity.Detail;
+import en.abramovskyi.spring.hibernate_one_to_one.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

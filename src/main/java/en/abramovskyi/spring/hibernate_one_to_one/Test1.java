@@ -1,4 +1,4 @@
-package en.abramovskyi.spring.hibernate_test2;
+package en.abramovskyi.spring.hibernate_one_to_one;
 
 import en.abramovskyi.spring.hibernate_test.entity.Employee;
 import org.hibernate.Session;
