@@ -43,28 +43,31 @@ public class Test1 {
 //        }
 //
 
-//        try {
-//            session = factory.getCurrentSession();
-//            session.beginTransaction();
-//
-//            Department department = session.get(Department.class, 1);
-//
-//            System.out.println(department);
-//            System.out.println(department.getEmployeeList());
-//
-//
-//            session.beginTransaction();
-//
-//
-//
-//            session.getTransaction().commit();
-//            System.out.println("Done!");
-//        }
-//
-//        finally {
-//            session.close();
-//            factory.close();
-//        }
+        try {
+            session = factory.getCurrentSession();
+            session.beginTransaction();
+
+            System.out.println("Get department");
+            Department department = session.get(Department.class, 4);
+
+            System.out.println("Show department");
+            System.out.println(department);
+
+            System.out.println("Load our employees");
+            department.getEmployeeList().get(0);
+
+            session.getTransaction().commit();
+
+            System.out.println("Show employees of the department");
+            System.out.println(department.getEmployeeList());
+
+            System.out.println("Done!");
+        }
+
+        finally {
+            session.close();
+            factory.close();
+        }
 
 
 //        try {
@@ -91,23 +94,53 @@ public class Test1 {
 //        }
 
 //********************************************/
+//
+//        try {
+//            session = factory.getCurrentSession();
+//            session.beginTransaction();
+//
+//            Employee employee = session.get(Employee.class, 4);
+//
+//            session.delete(employee);
+//
+//            session.getTransaction().commit();
+//            System.out.println("Done!");
+//        }
+//
+//        finally {
+//            session.close();
+//            factory.close();
+//        }
 
-        try {
-            session = factory.getCurrentSession();
-            session.beginTransaction();
 
-            Employee employee = session.get(Employee.class, 4);
 
-            session.delete(employee);
-
-            session.getTransaction().commit();
-            System.out.println("Done!");
-        }
-
-        finally {
-            session.close();
-            factory.close();
-        }
+//        try {
+//            session = factory.getCurrentSession();
+//            Department department = new Department("Sales",
+//                    800, 1500);
+//            Employee emp1 = new Employee("Michel", "Grace"
+//                    , 1000);
+//            Employee emp2 = new Employee("Nicky", "Olsen"
+//                    , 1100);
+//            Employee emp3 = new Employee("Sam", "Silver"
+//                    , 900);
+//
+//            department.addEmployeeToDepartment(emp1);
+//            department.addEmployeeToDepartment(emp2);
+//            department.addEmployeeToDepartment(emp3);
+//
+//            session.beginTransaction();
+//            session.save(department);
+//
+//
+//            session.getTransaction().commit();
+//            System.out.println("Done!");
+//        }
+//
+//        finally {
+//            session.close();
+//            factory.close();
+//        }
 
 
     }
